@@ -1,0 +1,23 @@
+# name of the workflow "name" is the mandatory keyword
+name: First Workflow
+
+# when this workflow should be triggered
+on: workflow_dispatch
+
+jobs:
+  # this is the name of the job its depend on us
+  first-job:
+
+    # this tells which environment we want to use
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # now we have added key:value pair that defines this step
+      # for the first step we have defined the name
+      - name: print greeting
+        # the command that should be executed
+        run: echo "hello ..."
+
+      - name: print goodbye
+        run: echo "Done bye..."
